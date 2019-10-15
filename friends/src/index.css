@@ -11,3 +11,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+
+header {
+  background-color: lightgrey;
+  padding: 20px;
+}
+
+a {
+  margin: 10px;
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover{
+  color: #fff
+}
+
+form {
+  margin-top: 50px;
+}
+
