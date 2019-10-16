@@ -4,7 +4,7 @@ import Friends from './Friends'
 
 const AddFriend = () => {
 
-    const [ newFriend, setNewFriend ] = useState({name: '', age: 0})
+    const [ newFriend, setNewFriend ] = useState({name: '', age: 0, email: ''})
 
     const addFriend = () => {
         axiosWithAuth()
@@ -21,7 +21,9 @@ const AddFriend = () => {
     const handleChanges = e => {
         console.log(newFriend)
         setNewFriend({...newFriend, 
-            [e.target.name]: e.target.value})        
+            [e.target.name]: e.target.value,
+            id: Date.now()
+        })        
     }
 
     return (
@@ -30,6 +32,7 @@ const AddFriend = () => {
             <form onSubmit={handleSubmit}>
                 <input type='text' name='name' placeholder='Name' value={newFriend.name} onChange={handleChanges} />
                 <input type='text' name='age' placeholder='Age' value={newFriend.age} onChange={handleChanges} />
+                <input type='email' name='email' placeholder='Email' value={newFriend.email} onChange={handleChanges} />
                 <button type='submit'>Add Friend</button>
             </form>
         </div>
