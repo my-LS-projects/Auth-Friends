@@ -5,8 +5,9 @@ import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
 
 // components
 import Login from './components/Login'
-import Friends from './components/Friends'
+import PrivateRoute from './components/PrivateRoute'
 import Header from './components/Header'
+import Friends from './components/Friends'
 
 function App() {
   return (
@@ -14,8 +15,9 @@ function App() {
       <div className="App">
         <Header />
         <Switch>
+          <PrivateRoute path='/protected' component={Friends}/>
           <Route path='/login' component={Login} />
-          <Route path='/friends' component={Friends} />
+          <Route component={Login} />
         </Switch>
       </div>
     </Router>

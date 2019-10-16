@@ -7,8 +7,8 @@ const Header = () => {
     return (
         <header>
             <nav>
-                <Link to='login'>Login</Link>
-                <Link to='friends'>Friends</Link>
+                <Link to='/login'>Login</Link>
+                <Link to='/protected'>Friends</Link>
             </nav>
         </header>
     )
